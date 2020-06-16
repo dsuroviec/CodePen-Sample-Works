@@ -1,0 +1,254 @@
+<head>
+<style>
+/* Global Styles */
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background-color:#0b0c10;
+  color:#66fcf1;
+  font-family: 'Heebo', sans-serif;
+}
+
+/* Navbar section
+  +May include transform to Links for hover effect */
+header{
+  position:fixed;
+  width:100%;
+ 
+}
+
+#navbar{
+  background-color:#1f2833;
+  height:60px;
+  
+}
+
+#navbar ul {
+text-align:right;
+padding-top:25px;
+}
+
+#navbar li {
+display: inline;
+margin-right:50px;
+}
+
+a{
+text-decoration:none;
+  font-size:25px;
+  color:#66fcf1;
+  font-weight:800;
+}
+
+/*Welcome section styles
+  +need to figure out how to make viewport absolute under the   navbar so 100 vh does not overlap below viewport and that     the transition is immediate to the user when scrolling*/
+#welcome-section{
+  background-color:#0b0c10;
+  height: 100vh;
+  text-align:center;
+}
+
+#welcome-section h1{
+  padding-top:150px;
+  padding-bottom:180px;
+  font-size:50px; 
+}
+
+#welcome-section h2{
+  font-size:40px;
+  color:#c5c6c7;
+}
+
+#welcome-section h3{
+  font-style:italic;
+  font-size:30px;
+  color:#c5c6c7;
+}
+
+/* Projects section 
+    + Hopes to include JS project and update photos from a repository as project was completed in codePen and the img of the project tiles are using hyperlinks from google images instead of previews of actual projects. This can be accomplished by committing the code to the computer or committing all code to a repository*/
+#projects h1{
+  margin-bottom:100px;
+  font-size:50px;
+  border-bottom: 1px solid black;
+  color:#1f2833;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background-color:	#45a29e;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-gap:64px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    border-radius:20px;
+  }
+}
+
+.project {
+  background: black;
+  border-radius:20px;
+}
+
+.project-image {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius:20px 20px 0 0;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+  color:#c5c6c7;
+}
+
+/* contact section */
+.contact-section {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding-bottom:10px;
+}
+
+.contact-section h1{
+  text-align:center;
+  margin: 150px;
+  font-size: 70px;
+  display:block;
+}
+
+.contact-links {
+  display: flex;
+  padding-top:250px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 28px;
+  transition: transform 0.3s ease-out;
+  padding-right:50px;
+}
+
+.contact-details:hover {
+  transform: translateY(6px);
+
+}
+</style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <ul>
+       <li>
+         <a href ="#welcome-section"> About</a>
+       </li>
+       <li>
+          <a href="#projects">Work</a>        
+       </li>
+       <li>
+         <a href="#contact">Contact</a>
+       </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div id="welcome-section">
+      <h1>Hello! Welcome to my Portfolio <i class="fas fa-briefcase"></i></h1> 
+ 
+      <h2>Darren Suroviec</h2>
+      <h3>A Web Developer</h3>
+    </div>
+    
+    <section id="projects" class="projects-section">
+      <h1>These are some of my projects</h1>
+      
+      <div class="projects-grid">
+
+        
+          <a href="https://codepen.io/dsuroviec/full/NWGGLZZ" target="_blank" class="project project-tile">
+          <img class="project-image" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX36526119.jpg" alt="project">
+          <p class="project-title">
+          Technical Documentation Page
+          </p>
+        </a>
+          
+        <a href="https://codepen.io/dsuroviec/full/VwLQwpa" target="_blank" class="project project-tile">
+          <img class="project-image" src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="project">
+          <p class="project-title">
+          Product Landing Page         
+          </p>
+        </a>
+          
+        <a href="https://codepen.io/dsuroviec/full/YzXxOby" target="_blank" class="project project-tile">
+          <img class="project-image" src="https://www.mycustomer.com/sites/default/files/styles/inline_banner/public/istock_blossomstar_survey.jpg?itok=MbTgDMVO">
+          <p class="project-title">
+          Survey Form Page           
+          </p>
+        </a>
+    </section>
+        
+    <section id="contact" class="contact-section">
+       <div class="contact-section-header">
+          <h1> How may I assist your team?</h1>
+       </div>       
+
+       <div class="contact-links">
+         <a
+          href="https://www.facebook.com/profile.php?id=1330451266"
+          target="_blank"
+          class="btn contact-details">
+           <i class="fab fa-facebook-square"></i> Facebook
+         </a>
+         <a
+          id="profile-link"
+          href="https://www.linkedin.com/in/darrensuroviec"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-linkedin"></i> LinkedIn</a
+         >
+         <a
+          href="https://codepen.io/dashboard/"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-codepen"></i> codePen</a
+        >
+        <a href="mailto:dsuroviec@yahoo.com" class="btn contact-details"
+          ><i class="fas fa-at"></i> Email me</a
+        >
+        <a href="tel:814-460-8677" class="btn contact-details"
+          ><i class="fas fa-mobile-alt"></i> Call me</a
+        >
+      </div>
+    </section>    
+  </main>
+</body>
